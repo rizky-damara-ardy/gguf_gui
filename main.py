@@ -69,7 +69,7 @@ def streamlit_main():
     st.header("Step 1: Convert Safetensor to GGUF")
     output_choices = (
         ["f32", "f16", "bf16", "q8_0", "auto"]
-        if np.uint32(1) == np.uint32(1).newbyteorder("<")
+        if np.dtype(np.uint32).byteorder == '<' 
         else ["f32", "f16"]
     )
     # Create a file uploader widget
