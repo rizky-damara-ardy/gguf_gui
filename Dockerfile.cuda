@@ -49,6 +49,11 @@ RUN . .venv/bin/activate && \
     pip install torch torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/cu124 && \
 	# Install sentencepiece
     pip install sentencepiece && \
+	# Install transformers
+	pip install transformers && \
+	# Install numpy
+	pip install numpy && \
+
     # Check if the requirements file exists before attempting to install
     if [ -f "llama.cpp/requirements/requirements-convert-hf-to-gguf.txt" ]; then \
         pip install -r "llama.cpp/requirements/requirements-convert-hf-to-gguf.txt"; \
