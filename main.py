@@ -175,7 +175,7 @@ def streamlit_main():
             with st.spinner(f"Converting Safetensors to {ggml_selected_type}"):
                 if imatrix:
                     # Construct the command
-                    cmd = ["./llama.cpp/llama-imatrix"]
+                    cmd = ["./llama.cpp/build/bin/llama-imatrix"]
                     if outfile_ggml:
                         cmd.extend(["-m", outfile_ggml])
                     if training_data:
