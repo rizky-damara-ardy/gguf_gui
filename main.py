@@ -196,7 +196,7 @@ def streamlit_main():
                     # st.text_area("Command Errors", result.stderr)
 
                 # Construct the command
-                cmd = ["./llama.cpp/llama-quantize"]
+                cmd = ["./llama.cpp/build/bin/llama-quantize"]
                 if imatrix:
                     cmd.extend(["--imatrix", imatrix_output_file or imatrix_file])
                 if allow_requantize:
